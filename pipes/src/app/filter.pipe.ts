@@ -7,7 +7,7 @@ import { ResourceLoader } from '@angular/compiler';
 export class FilterPipe implements PipeTransform {
 
   transform(value: any, filterString: string, propName: string): any {
-    if (value.length === 0) {
+    if (value.length === 0 || filterString === '') {
       return value;
     }
     const resultArray = [];
