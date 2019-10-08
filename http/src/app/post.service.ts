@@ -35,4 +35,8 @@ export class PostsService {
           return postsArray;
         }));
       }
+
+    deletePosts() {
+        return this.http.delete('https://recipe-list-96492.firebaseio.com/posts.json');
+    }
 }
